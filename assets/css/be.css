@@ -5,3 +5,7 @@
 .rad_log p, .rad_log pre {
     margin-top: 6px;
 }
+
+.rad_log p {
+    padding: 6px 0;
+}
