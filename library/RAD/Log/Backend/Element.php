@@ -29,31 +29,16 @@ class Element extends Backend
             $class .= ' h64';
         }
 
-        switch ($row['level']) {
-            case Log::EMERGENCY:
-            case Log::ALERT:
-            case Log::CRITICAL:
-            case Log::ERROR:
-                $color = 'tl_red';
-                break;
-            case Log::INFO:
-                $color = 'tl_green';
-                break;
-
-            default:
-                $color = '';
-        }
-
         if (empty($row['data'])) {
             return implode('', array(
-                '<div class="' . $color . ' rad_log_' . $row['level'] . '">' . date('Y-m-d H:i:s', $row['tstamp']) . ' - ' . $GLOBALS['TL_LANG']['tl_rad_log']['level'][$row['level']] . '</div>',
-                '<div class="rad_log"><p><strong>' . $row['message'] . '</strong></p></div>',
+                '<div>' . date('Y-m-d H:i:s', $row['tstamp']) . ' - ' . $GLOBALS['TL_LANG']['tl_rad_log']['level'][$row['level']] . '</div>',
+                '<div class="rad_log"><p class="level_' . $row['level'] . '"><strong>' . $row['message'] . '</strong></p></div>',
             ));
         }
 
         return implode('', array(
-            '<div class="' . $color . ' rad_log_' . $row['level'] . '">' . date('Y-m-d H:i:s', $row['tstamp']) . ' - ' . $row['type'] . '</div>',
-            '<div class="' . trim($class) . ' rad_log"><p><strong>' . $row['message'] . '</strong></p><pre>' . htmlentities($row['data']) . '</pre></div>',
+            '<div>' . date('Y-m-d H:i:s', $row['tstamp']) . ' - ' . $row['type'] . '</div>',
+            '<div class="' . trim($class) . ' rad_log"><p class="level_' . $row['level'] . '"><strong>' . $row['message'] . '</strong></p><pre>' . htmlentities($row['data']) . '</pre></div>',
         ));
     }
 }
