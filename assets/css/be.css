@@ -9,17 +9,17 @@
 }
 
 .rad_log .level_4, .rad_log .level_2 {
-    background-color: rgba(255, 128, 0, 0.7);
+    background-color: rgba(255, 128, 0, 0.5);
     color: white;
 }
 
 .rad_log .level_1 {
-    background-color: rgba(0, 128, 255, 0.3);
+    background-color: rgba(0, 128, 255, 0.5);
     color: white;
 }
 
 .rad_log .level_0 {
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: rgba(255, 255, 255, 0.5);
     color: white;
 }
 
