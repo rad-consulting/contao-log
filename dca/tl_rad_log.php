@@ -29,7 +29,7 @@ $GLOBALS['TL_DCA']['tl_rad_log']['list'] = array(
         'panelLayout' => 'filter;search,limit',
         'headerFields' => array('id', 'tstamp'),
         'disableGrouping' => true,
-        'child_record_callback' => array('RAD\\Log\\Backend\\Element', 'addLog'),
+        'child_record_callback' => array('RAD\\Log\\Backend\\Element', 'showLog'),
     ),
     'global_operations' => array(
         'all' => array(
@@ -72,8 +72,8 @@ $GLOBALS['TL_DCA']['tl_rad_log']['fields'] = array(
         'sql' => "char(64) NOT NULL default ''",
         'label' => &$GLOBALS['TL_LANG']['tl_rad_log']['ptable'],
     ),
-    'type' => array(
-        'sql' => "char(10) NOT NULL default ''",
+    'level' => array(
+        'sql' => "int(10) NOT NULL default '1'",
         'label' => &$GLOBALS['TL_LANG']['tl_rad_log']['type'],
     ),
     'message' => array(
