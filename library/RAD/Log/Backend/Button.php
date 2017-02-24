@@ -5,7 +5,7 @@
  * @author     Olivier Dahinden <o.dahinden@rad-consulting.ch>
  * @license    http://opensource.org/licenses/lgpl-3.0.html
  */
-namespace RAD\Log;
+namespace RAD\Log\Backend;
 
 use Contao\Backend;
 use Contao\Image;
