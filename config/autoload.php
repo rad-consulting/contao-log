@@ -8,4 +8,4 @@
  */
 
 // Log
-\NamespaceClassLoader::add('RAD', (is_link(__DIR__ . '/../') ? readlink(__DIR__ . '/../') : __DIR__) . '/../library');
+\NamespaceClassLoader::add('RAD', (is_link(__DIR__ . '/../') ? readlink(__DIR__ . '/../') : __DIR__ . '/../') . '/library');
