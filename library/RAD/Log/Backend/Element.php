@@ -46,7 +46,7 @@ class Element extends Backend
 
         if (empty($row['data'])) {
             return implode('', array(
-                '<div class="' . $color . '">' . date('Y-m-d H:i:s', $row['tstamp']) . ' - ' . $row['level'] . '</div>',
+                '<div class="' . $color . '">' . date('Y-m-d H:i:s', $row['tstamp']) . ' - ' . $GLOBALS['TL_LANG']['tl_rad_log']['level'][$row['level']] . '</div>',
                 '<div><p><strong>' . $row['message'] . '</strong></p></div>',
             ));
         }
