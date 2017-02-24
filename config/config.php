@@ -7,4 +7,4 @@
  */
 
 // Log
-$GLOBALS['TL_MODELS'][\RAD\Log\Model\LogModel::getTable()] = 'RAD\\Logging\\Model\\LogModel';
+$GLOBALS['TL_MODELS'][\RAD\Log\Model\LogModel::getTable()] = 'RAD\\Log\\Model\\LogModel';
