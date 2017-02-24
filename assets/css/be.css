@@ -1,5 +1,26 @@
-.rad_log .level_8 {
+.rad_log .level_64, .rad_log .level_32 {
+    background-color: rgba(255, 0, 0, 1);
+    color: white;
+}
+
+.rad_log .level_16, .rad_log .level_8 {
     background-color: rgba(255, 0, 0, 0.5);
+    color: white;
+}
+
+.rad_log .level_4, .rad_log .level_2 {
+    background-color: rgba(255, 128, 0, 0.7);
+    color: white;
+}
+
+.rad_log .level_1 {
+    background-color: rgba(0, 128, 255, 0.3);
+    color: white;
+}
+
+.rad_log .level_1 {
+    background-color: rgba(255, 255, 255, 0.3);
+    color: white;
 }
 
 .rad_log p, .rad_log pre {
