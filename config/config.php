@@ -6,5 +6,11 @@
  * @license    http://opensource.org/licenses/lgpl-3.0.html
  */
 
-// Log
+// Models
 $GLOBALS['TL_MODELS'][\RAD\Log\Model\LogModel::getTable()] = 'RAD\\Log\\Model\\LogModel';
+
+// Backend stylesheet
+if ('BE' == TL_MODE) {
+    $GLOBALS['TL_CSS'][] = 'system/modules/rad-log/assets/css/be.css|screen';
+}
+

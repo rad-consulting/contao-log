@@ -1,0 +1,7 @@
+.rad_log_8 {
+    background-color: rgba(255, 0, 0, 0.5);
+}
+
+.rad_log p, .rad_log pre {
+    margin-top: 6px;
+}
