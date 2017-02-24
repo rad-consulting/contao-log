@@ -59,7 +59,7 @@ class LogModel extends Model
      * @param string|null $data
      * @return static
      */
-    public static function log(Model $model, $message, $level = self::INFO, $data = null)
+    public static function factory(Model $model, $message, $level = self::INFO, $data = null)
     {
         $instance = new static();
         $instance->pid = $model->id;
