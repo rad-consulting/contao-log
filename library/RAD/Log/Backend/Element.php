@@ -29,7 +29,7 @@ class Element extends Backend
             $class .= ' h64';
         }
 
-        switch ($row['type']) {
+        switch ($row['level']) {
             case Log::EMERGENCY:
             case Log::ALERT:
             case Log::CRITICAL:
@@ -46,7 +46,7 @@ class Element extends Backend
 
         if (empty($row['data'])) {
             return implode('', array(
-                '<div class="' . $color . '">' . date('Y-m-d H:i:s', $row['tstamp']) . ' - ' . $row['type'] . '</div>',
+                '<div class="' . $color . '">' . date('Y-m-d H:i:s', $row['tstamp']) . ' - ' . $row['level'] . '</div>',
                 '<div><p><strong>' . $row['message'] . '</strong></p></div>',
             ));
         }
