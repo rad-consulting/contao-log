@@ -8,4 +8,4 @@
  */
 
 // Log
-\NamespaceClassLoader::add('RAD', __DIR__ . '/../library');
+\NamespaceClassLoader::add('RAD', realpath(__DIR__) . '/../library');
