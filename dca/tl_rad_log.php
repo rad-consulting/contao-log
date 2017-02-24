@@ -93,12 +93,12 @@ switch (\Contao\Input::get('do')) {
         break;
 
     case 'events':
-        $GLOBALS['TL_DCA']['tl_rad_log']['config']['ptable'] = 'tl_g4g_event';
+        $GLOBALS['TL_DCA']['tl_rad_log']['config']['ptable'] = 'tl_rad_event';
         $GLOBALS['TL_DCA']['tl_rad_log']['list']['sorting']['headerFields'] = array('id', 'name', 'tstamp', 'attempt', 'timeout');
         break;
 
     case 'fulfillments':
-        $GLOBALS['TL_DCA']['tl_rad_log']['config']['ptable'] = 'tl_g4g_fulfillment';
+        $GLOBALS['TL_DCA']['tl_rad_log']['config']['ptable'] = 'tl_rad_fulfillment';
         break;
 
     case 'iso_products':
@@ -107,7 +107,7 @@ switch (\Contao\Input::get('do')) {
         break;
 
     case 'supplierorders':
-        $GLOBALS['TL_DCA']['tl_rad_log']['config']['ptable'] = 'tl_g4g_supplier_order';
+        $GLOBALS['TL_DCA']['tl_rad_log']['config']['ptable'] = 'tl_rad_supplier_order';
         $GLOBALS['TL_DCA']['tl_rad_log']['list']['sorting']['headerFields'] = array('id', 'name', 'tstamp');
         break;
 
