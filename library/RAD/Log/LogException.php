@@ -22,12 +22,12 @@ class LogException extends Exception
     /**
      * LogException constructor.
      *
-     * @param string      $message
-     * @param int         $code
-     * @param Exception   $previous
-     * @param string|null $data
+     * @param string         $message
+     * @param int            $code
+     * @param Exception|null $previous
+     * @param string|null    $data
      */
-    public function __construct($message, $code, Exception $previous, $data = null)
+    public function __construct($message, $code, Exception $previous = null, $data = null)
     {
         parent::__construct($message, $code, $previous);
         $this->data = $data;
