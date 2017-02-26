@@ -11,7 +11,7 @@ use Contao\Database;
 use Contao\Model;
 
 /**
- * Class LogModel
+ * Class Log
  *
  * @property int    $id
  * @property int    $pid
@@ -21,7 +21,7 @@ use Contao\Model;
  * @property string $level
  * @property string $data
  */
-class LogModel extends Model
+class Log extends Model
 {
     /**
      * @const int
