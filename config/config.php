@@ -7,7 +7,7 @@
  */
 
 // Models
-$GLOBALS['TL_MODELS'][\RAD\Log\Model\Log::getTable()] = 'RAD\\Log\\Model\\LogModel';
+$GLOBALS['TL_MODELS'][\RAD\Log\Model\Log::getTable()] = 'RAD\\Log\\Model\\Log';
 
 // Backend stylesheet
 if ('BE' == TL_MODE) {
