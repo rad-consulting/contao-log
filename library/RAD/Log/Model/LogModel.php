@@ -9,6 +9,8 @@ namespace RAD\Log\Model;
 
 /**
  * Class LogModel
+ *
+ * @deprecated
  */
 class LogModel extends Log
 {
