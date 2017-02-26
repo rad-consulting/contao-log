@@ -9,6 +9,8 @@
 // Models
 $GLOBALS['TL_MODELS'][\RAD\Log\Model\Log::getTable()] = 'RAD\\Log\\Model\\Log';
 
+$GLOBALS['RAD_LOG_ENTITIES'] = array();
+
 // Backend stylesheet
 if ('BE' == TL_MODE) {
     $GLOBALS['TL_CSS'][] = 'system/modules/rad-log/assets/css/be.css|screen';

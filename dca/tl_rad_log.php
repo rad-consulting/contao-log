@@ -86,30 +86,12 @@ $GLOBALS['TL_DCA']['tl_rad_log']['fields'] = array(
     ),
 );
 
-// TODO: Clear
-switch (\Contao\Input::get('do')) {
-    case 'campaigns':
-        $GLOBALS['TL_DCA']['tl_rad_log']['config']['ptable'] = 'tl_g4g_campaign';
-        break;
+foreach ($GLOBALS['RAD_LOG_ENTITIES'] as $k => $v) {
+    if (\Contao\Input::get('do') == $k) {
+        $GLOBALS['TL_DCA']['tl_rad_log']['config']['ptable'] = $v['ptable'];
 
-    case 'events':
-        $GLOBALS['TL_DCA']['tl_rad_log']['config']['ptable'] = 'tl_rad_event';
-        $GLOBALS['TL_DCA']['tl_rad_log']['list']['sorting']['headerFields'] = array('id', 'name', 'tstamp', 'attempt', 'timeout');
-        break;
-
-    case 'fulfillments':
-        $GLOBALS['TL_DCA']['tl_rad_log']['config']['ptable'] = 'tl_rad_fulfillment';
-        break;
-
-    case 'iso_products':
-        $GLOBALS['TL_DCA']['tl_rad_log']['config']['ptable'] = 'tl_iso_product';
-        $GLOBALS['TL_DCA']['tl_rad_log']['list']['sorting']['headerFields'] = array('id', 'name', 'tstamp');
-        break;
-
-    case 'supplierorders':
-        $GLOBALS['TL_DCA']['tl_rad_log']['config']['ptable'] = 'tl_rad_supplier_order';
-        $GLOBALS['TL_DCA']['tl_rad_log']['list']['sorting']['headerFields'] = array('id', 'name', 'tstamp');
-        break;
-
-    default:
+        if (isset($v['headerFields'])) {
+            $GLOBALS['TL_DCA']['tl_rad_log']['list']['sorting']['headerFields'] = $v['headerFields'];
+        }
+    }
 }
