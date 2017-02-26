@@ -7,11 +7,11 @@
  */
 
 // Levels
-$GLOBALS['TL_LANG']['tl_rad_log']['level'][\RAD\Log\Model\LogModel::EMERGENCY] = 'AUSNAHME';
-$GLOBALS['TL_LANG']['tl_rad_log']['level'][\RAD\Log\Model\LogModel::ALERT] = 'ALARM';
-$GLOBALS['TL_LANG']['tl_rad_log']['level'][\RAD\Log\Model\LogModel::CRITICAL] = 'KRITISCH';
-$GLOBALS['TL_LANG']['tl_rad_log']['level'][\RAD\Log\Model\LogModel::ERROR] = 'FEHLER';
-$GLOBALS['TL_LANG']['tl_rad_log']['level'][\RAD\Log\Model\LogModel::WARNING] = 'WARNUNG';
-$GLOBALS['TL_LANG']['tl_rad_log']['level'][\RAD\Log\Model\LogModel::NOTICE] = 'MELDUNG';
-$GLOBALS['TL_LANG']['tl_rad_log']['level'][\RAD\Log\Model\LogModel::INFO] = 'INFO';
-$GLOBALS['TL_LANG']['tl_rad_log']['level'][\RAD\Log\Model\LogModel::DEBUG] = 'DEBUG';
+$GLOBALS['TL_LANG']['tl_rad_log']['level'][\RAD\Log\Model\Log::EMERGENCY] = 'AUSNAHME';
+$GLOBALS['TL_LANG']['tl_rad_log']['level'][\RAD\Log\Model\Log::ALERT] = 'ALARM';
+$GLOBALS['TL_LANG']['tl_rad_log']['level'][\RAD\Log\Model\Log::CRITICAL] = 'KRITISCH';
+$GLOBALS['TL_LANG']['tl_rad_log']['level'][\RAD\Log\Model\Log::ERROR] = 'FEHLER';
+$GLOBALS['TL_LANG']['tl_rad_log']['level'][\RAD\Log\Model\Log::WARNING] = 'WARNUNG';
+$GLOBALS['TL_LANG']['tl_rad_log']['level'][\RAD\Log\Model\Log::NOTICE] = 'MELDUNG';
+$GLOBALS['TL_LANG']['tl_rad_log']['level'][\RAD\Log\Model\Log::INFO] = 'INFO';
+$GLOBALS['TL_LANG']['tl_rad_log']['level'][\RAD\Log\Model\Log::DEBUG] = 'DEBUG';
