@@ -10,6 +10,7 @@ namespace RAD\Log\Backend;
 
 use Contao\Backend;
 use Contao\Config;
+use Contao\System;
 use RAD\Log\Model\LogModel as Log;
 
 /**
@@ -23,6 +24,8 @@ class Element extends Backend
      */
     public function showLog(array &$row)
     {
+        System::loadLanguageFile('tl_rad_log');
+
         $class = 'limit_height';
 
         if (!Config::get('doNotCollapse')) {
