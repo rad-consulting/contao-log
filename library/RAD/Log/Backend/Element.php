@@ -40,7 +40,7 @@ class Element extends Backend
         }
 
         return implode('', array(
-            '<div>' . date('Y-m-d H:i:s', $row['tstamp']) . ' - ' . $row['type'] . '</div>',
+            '<div>' . date('Y-m-d H:i:s', $row['tstamp']) . ' - ' . $GLOBALS['TL_LANG']['tl_rad_log']['level'][$row['level']] . '</div>',
             '<div class="' . trim($class) . ' rad_log"><p class="level_' . $row['level'] . '"><strong>' . $row['message'] . '</strong></p><pre>' . htmlentities($row['data']) . '</pre></div>',
         ));
     }
