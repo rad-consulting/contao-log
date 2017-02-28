@@ -41,6 +41,18 @@ class Log extends Model
     public static $strTable = 'tl_rad_log';
 
     /**
+     * @param int $days
+     * @return int
+     */
+    public static function deleteByAge($days = 7)
+    {
+        $stmt = Database::getInstance()->prepare('DELETE FROM ' . static::getTable() . ' WHERE `tstamp` < UNIX_TIMESTAMP() - ?');
+        $res = $stmt->execute($days * 24 * 3600);
+
+        return $res->numRows;
+    }
+
+    /**
      * @param Model $model
      * @return int
      */
