@@ -63,7 +63,7 @@ $GLOBALS['TL_DCA']['tl_rad_log']['fields'] = array(
     'tstamp' => array(
         'sql' => "int(10) unsigned NOT NULL default '0'",
         'label' => &$GLOBALS['TL_LANG']['tl_rad_log']['tstamp'],
-        'sort' => true,
+        'sorting' => true,
     ),
     'pid' => array(
         'sql' => "int(10) unsigned NOT NULL default '0'",
