@@ -7,7 +7,6 @@
  */
 namespace RAD\Log;
 
-use Contao\Config;
 use RAD\Log\Model\Log;
 
 /**
@@ -20,6 +19,6 @@ class Service
      */
     public function cleanLog()
     {
-        Log::deleteByAge(Config::get('rad_log_age'));
+        Log::deleteByAge(7);
     }
 }
